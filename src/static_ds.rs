@@ -3,12 +3,11 @@ use std::collections::HashMap;
 pub fn create_static_regions() -> HashMap<&'static str, &'static str> {
 
 
-    let mut regions = HashMap::new();
-    regions.insert("A", "Südafrika");
-    regions.insert("J", "Japan");
 
+    let mut regions = HashMap::new();
     // Africa
     regions.insert("AA–AH", "Südafrika");
+    regions.insert("A", "Südafrika");
     // Asia
     regions.insert("J", "Japan");
     regions.insert("AA", "Südafrika");
@@ -45,7 +44,8 @@ pub fn create_static_regions() -> HashMap<&'static str, &'static str> {
     regions.insert("UU–UZ", "Rumänien");
     regions.insert("U1–U7", "Slowakei");
     regions.insert("VA–VE", "Österreich");
-    regions.insert("VF–VR", "Frankreich");
+    regions.insert("VF", "Frankreich");
+    regions.insert("VR", "Frankreich");
     regions.insert("VS–VW", "Spanien");
     regions.insert("VX–V2", "Jugoslawien");
     regions.insert("W", "Deutschland");
@@ -56,12 +56,7 @@ pub fn create_static_regions() -> HashMap<&'static str, &'static str> {
     regions.insert("YF–YK", "Finnland");
     regions.insert("YS–YW", "Schweden");
     regions.insert("ZA–ZR", "Italien");
-    // North America
-    regions.insert("1", "USA");
-    regions.insert("4", "USA");
-    regions.insert("5", "USA");
-    regions.insert("2", "Kanada");
-    regions.insert("3", "Mexiko");
+
     // Australia/Oceania
     regions.insert("6A–6W", "Australien");
     regions.insert("7A–7E", "Neuseeland");
@@ -113,7 +108,9 @@ pub fn create_static_manufactures() -> HashMap<&'static str, &'static str> {
     manufacturers.insert("VFA", "Alpine, heute Renault");
     manufacturers.insert("VF1", "Renault");
     manufacturers.insert("VF3", "Peugeot");
-    manufacturers.insert("VF7[8], VR7", "Citroën");
+    manufacturers.insert("VF7", "Citroën");
+    manufacturers.insert("VF8", "Citroën");
+    manufacturers.insert("VR7", "Citroën");
     manufacturers.insert("VNK", "Toyota Frankreich");
     manufacturers.insert("VSK", "Nissan Spanien");
     manufacturers.insert("VSS", "Seat");
